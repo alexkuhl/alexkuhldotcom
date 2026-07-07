@@ -73,6 +73,19 @@ svg.icon {
 	vertical-align: middle;
 }
 
+/*-------------Accessibility utilities ---------------------------------------*/
+.visually-hidden {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
 /*-------------General Style---------------------------------------*/
 html{
 	overflow-x:hidden !important;
@@ -689,7 +702,7 @@ header {
 	top:45%;
 	z-index:16;
 }
-.hero-title h3 {
+.hero-title h2 {
 	float:left;
 	color:#fff;
 	position:relative;
@@ -698,7 +711,7 @@ header {
 	font-family:'Montserrat', sans-serif;
     font-weight:700;
 }
-.hero-title h4 {
+.hero-title h3 {
 	float:left;
 	font-size:24px;
 	text-transform:uppercase;
@@ -713,7 +726,7 @@ header {
 	padding-left:20px;
 	width:100%;
 }
-.hero-title h3 a, h4 a, .hero-title h4{
+.hero-title h2 a, .hero-title h3 a, .hero-title h3{
 	 color:#fff;
 	 -webkit-transition: all 200ms linear;
     -moz-transition: all 200ms linear;
@@ -921,7 +934,7 @@ footer {
 	width:100%;
 	padding-bottom:20px;
 }
-.footer-info h4 {
+.footer-info h3 {
 	float:left;
 	width:100%;
 	color:#fff;
@@ -932,7 +945,7 @@ footer {
 	text-align:left;
 	margin-bottom:45px;
 }
-.footer-info h4:before {
+.footer-info h3:before {
 	content:'';
 	position:absolute;
 	bottom:-7px;
@@ -1056,12 +1069,12 @@ footer {
 	padding-left:0 !important;
 	padding-right:0 !important;
 }
-.hero-title h3 {
+.hero-title h2 {
 	width:100%;
 	font-size:64px;
 	text-align:center !important;
 }
-.hero-title h4 {
+.hero-title h3 {
 	width:100%;
 	text-align:center !important;
 }
@@ -1069,7 +1082,7 @@ footer {
 	padding-left:0;
 	border: none !important;
 }
-.hero-title h4:before {
+.hero-title h3:before {
 	content:'';
 	position:absolute;
 	bottom:-20px;
@@ -1088,7 +1101,7 @@ footer {
 }
 }
 @media only screen and  (max-width: 540px) {
-.hero-title h3 {
+.hero-title h2 {
 	font-size:45px;
 }
 .text-title {
