@@ -175,45 +175,6 @@ function contanimshow() {
 }
 
 }
-	// if mobile - remove  parallax  ------------------
-function initparallax() {
-    var a = {
-        Android: function() {
-            return navigator.userAgent.match(/Android/i);
-        },
-        BlackBerry: function() {
-            return navigator.userAgent.match(/BlackBerry/i);
-        },
-        iOS: function() {
-            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-        },
-        Opera: function() {
-            return navigator.userAgent.match(/Opera Mini/i);
-        },
-        Windows: function() {
-            return navigator.userAgent.match(/IEMobile/i);
-        },
-        any: function() {
-            return a.Android() || a.BlackBerry() || a.iOS() || a.Opera() || a.Windows();
-        }
-    };
-    trueMobile = a.any();
-    if (null == trueMobile) {
-        var b = $(".content");
-        b.find("[data-top-bottom]").length > 0 && b.waitForImages(function() {
-            s = skrollr.init();
-            s.destroy();
-            skrollr.init({
-                forceHeight: !1,
-                easing: "outCubic",
-                mobileCheck: function() {
-                    return !1;
-                }
-            });
-        });
-    }
-}
 $(document).ready(function() {
     initBionick();
-    initparallax();
 });
