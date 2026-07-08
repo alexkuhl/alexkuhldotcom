@@ -67,8 +67,20 @@ function initBionick() {
         minWidth: 1036
     });
 	// scroll animation ------------------
+    var bnt;
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 300) $("footer").addClass("visfooter"); else $("footer").removeClass("visfooter");
+        var a = $(this).scrollTop();
+        if (a > 300) $("footer").addClass("visfooter"); else $("footer").removeClass("visfooter");
+        clearTimeout(bnt);
+        bnt = setTimeout(function() {
+            if ($(window).scrollTop() + $(window).height() >= $(document).height() - 2) {
+                var c = $(".scroll-nav a").last();
+                $(".scroll-nav a").removeClass("act-link");
+                c.addClass("act-link");
+                $(".bg-scroll").css("background-image", "url(" + c.data("bgscr") + ")");
+                $(".bg-title span").html(c.data("bgtex"));
+            }
+        }, 300);
     });
     $(".nav-inner nav li").on("mouseenter", function() {
         $(this).find("ul").stop().slideDown();
